@@ -14,11 +14,13 @@ class PhotosViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var posts: [NSDictionary] = []
     
     @IBOutlet weak var photoTableView: UITableView!
-    
+    let refreshControl: UIRefreshControl = UIRefreshControl()
     override func viewDidLoad() {
         super.viewDidLoad()
         photoTableView.delegate = self
         photoTableView.dataSource = self
+        refreshControl.addTarget(self, action: #selector(PhotosViewController.uiRefreshControlAction), for: UIControlEvents.valueChanged)
+        self.photoTableView.addSubview(refreshControl)
         //photoTableView.rowHeight = 240
         
         // Do any additional setup after loading the view.
@@ -53,6 +55,15 @@ class PhotosViewController: UIViewController, UITableViewDelegate, UITableViewDa
         });
         task.resume()
     }
+    func uiRefreshControlAction()
+    {
+        self.photoTableView.reloadData()
+        refreshControl.endRefreshing()
+    }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return posts.count
@@ -75,10 +86,7 @@ class PhotosViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+   
 
 
     /*

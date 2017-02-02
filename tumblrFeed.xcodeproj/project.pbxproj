@@ -126,6 +126,7 @@
 				TargetAttributes = {
 					F826930C1E42A25D00E11DDB = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = RG534BC4E2;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -338,11 +339,14 @@
 			baseConfigurationReference = 5333ECA7536770067F9589B4 /* Pods-tumblrFeed.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RG534BC4E2;
 				INFOPLIST_FILE = tumblrFeed/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = codepath.tumblrFeed;
+				PRODUCT_BUNDLE_IDENTIFIER = tumblrFeed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -351,11 +355,14 @@
 			baseConfigurationReference = EDFFE1E21614E34ECB957A8F /* Pods-tumblrFeed.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RG534BC4E2;
 				INFOPLIST_FILE = tumblrFeed/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = codepath.tumblrFeed;
+				PRODUCT_BUNDLE_IDENTIFIER = tumblrFeed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
